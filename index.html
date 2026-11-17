@@ -443,7 +443,7 @@
         <div class="hv" id="hv" aria-hidden="true">
           <div class="hv-ring"></div>
           <div class="hv-layer hv-jersey"><div class="pop"><div class="floaty"><img class="hero-jersey-photo" src="Images/optimized/kit-003.webp" alt="FC Barcelona home jersey" decoding="async" fetchpriority="high"></div></div></div>
-          <div class="hv-layer hv-boot"><div class="pop b"><div class="floaty slow"><img class="hero-boot-photo" src="Images/optimized/kit-001.webp" alt="Adidas Predator football boot" decoding="async" fetchpriority="low"></div></div></div>
+          <div class="hv-layer hv-boot"><div class="pop b"><div class="floaty slow"><img class="hero-boot-photo" src="Images/blue predator nanostrike.jpeg" alt="adidas Predator Nanostrike Blue" decoding="async" fetchpriority="low"></div></div></div>
           <div class="chip c2"><b>Sizes covered</b><span>S to XXL and EU 40 to 45</span></div>
         </div>
       </div>
@@ -1416,10 +1416,9 @@ const heroBoot = $('.hero-boot-photo');
 const jerseyPhotos = PRODUCTS
   .filter(product => product.img && (product.cat === 'fan' || product.cat === 'player'))
   .map(product => ({ src: product.img, alt: product.name }));
-const bootPhotos = [
-  { src: 'Images/optimized/kit-001.webp', alt: 'Adidas Predator football boot' },
-  { src: 'Images/optimized/kit-002.webp', alt: 'Adidas Predator football boot' }
-];
+const bootPhotos = PRODUCTS
+  .filter(product => product.cat === 'boots' && product.img)
+  .map(product => ({ src: product.img, alt: product.name }));
 let jerseyPhotoIndex = Math.max(0, jerseyPhotos.findIndex(photo => photo.src === heroJersey.getAttribute('src')));
 let bootPhotoIndex = Math.max(0, bootPhotos.findIndex(photo => photo.src === heroBoot.getAttribute('src')));
 
