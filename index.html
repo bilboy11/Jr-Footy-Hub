@@ -442,8 +442,8 @@
 
         <div class="hv" id="hv" aria-hidden="true">
           <div class="hv-ring"></div>
-          <div class="hv-layer hv-jersey"><div class="pop"><div class="floaty"><img class="hero-jersey-photo" src="Images/Fc%20Barcelona%20Home.jpeg" alt="FC Barcelona home jersey"></div></div></div>
-          <div class="hv-layer hv-boot"><div class="pop b"><div class="floaty slow"><img class="hero-boot-photo" src="Images/Adidas%20Predator%202.jpeg" alt="Adidas Predator football boot"></div></div></div>
+          <div class="hv-layer hv-jersey"><div class="pop"><div class="floaty"><img class="hero-jersey-photo" src="Images/optimized/kit-003.webp" alt="FC Barcelona home jersey" decoding="async" fetchpriority="high"></div></div></div>
+          <div class="hv-layer hv-boot"><div class="pop b"><div class="floaty slow"><img class="hero-boot-photo" src="Images/optimized/kit-001.webp" alt="Adidas Predator football boot" decoding="async" fetchpriority="low"></div></div></div>
           <div class="chip c2"><b>Sizes covered</b><span>S to XXL and EU 40 to 45</span></div>
         </div>
       </div>
@@ -605,6 +605,7 @@
 const WA_NUMBER = '2349032405682';              // WhatsApp number, international format, no +
 const STORE_KEY = 'jrfh_cart_v1';
 const MAX_QTY = 20;
+const CUSTOMIZATION_FEE = 2000;
 const ZONES = ['Abuja', 'Kaduna', 'Interstate'];
 
 const SIZESETS = {
@@ -628,125 +629,125 @@ const CATS = {
    ===================================================== */
 const PRODUCTS = [
   // Fan jerseys, N12,000
-  { id: 'eagles-home',   name: 'Nigeria Super Eagles Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['Best Seller'], img: 'Images/nigeria%20home.jpeg',
+  { id: 'eagles-home',   name: 'Nigeria Super Eagles Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['Best Seller'], img: 'Images/optimized/kit-049.webp',
     art: { t: 'jersey', body: '#0E9F4F', sleeve: '#0A7A3B', trim: '#FFFFFF', stripe: '#0B8A43', pattern: 'stripes', tint: '#0E9F4F' } },
-  { id: 'arsenal-home',  name: 'Arsenal Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['New'], img: 'Images/arsenal%20home.jpeg',
+  { id: 'arsenal-home',  name: 'Arsenal Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['New'], img: 'Images/optimized/kit-012.webp',
     art: { t: 'jersey', body: '#D9232D', sleeve: '#FFFFFF', trim: '#FFFFFF', collar: 'v', tint: '#D9232D' } },
-  { id: 'arsenal-home-ls', name: 'Arsenal Home Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/arsenal%20long%20sleeve%20home.jpeg',
+  { id: 'arsenal-home-ls', name: 'Arsenal Home Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/optimized/kit-013.webp',
     art: { t: 'jersey', body: '#D9232D', sleeve: '#FFFFFF', trim: '#FFFFFF', collar: 'v', tint: '#D9232D' } },
-  { id: 'arsenal-away',  name: 'Arsenal Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/arsenal%20away.jpeg',
+  { id: 'arsenal-away',  name: 'Arsenal Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-011.webp',
     art: { t: 'jersey', body: '#F4F0E8', sleeve: '#F4F0E8', trim: '#D9232D', tint: '#D9232D' } },
-  { id: 'arsenal-third', name: 'Arsenal Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/arsenal%20third.jpeg',
+  { id: 'arsenal-third', name: 'Arsenal Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-014.webp',
     art: { t: 'jersey', body: '#172A53', sleeve: '#172A53', trim: '#D9232D', tint: '#172A53' } },
-  { id: 'madrid-home',   name: 'Real Madrid Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/madrid%20home.jpeg',
+  { id: 'madrid-home',   name: 'Real Madrid Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-045.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#FFFFFF', trim: '#1B365D', tint: '#1B365D' } },
-  { id: 'madrid-third',  name: 'Real Madrid Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['New'], img: 'Images/madrid%20third.jpeg',
+  { id: 'madrid-third',  name: 'Real Madrid Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['New'], img: 'Images/optimized/kit-046.webp',
     art: { t: 'jersey', body: '#1F2A44', sleeve: '#1F2A44', trim: '#E8C547', stripe: '#E8C547', tint: '#1F2A44' } },
-  { id: 'atletico-home', name: 'Atletico Madrid Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/athmadrid%20home.jpeg',
+  { id: 'atletico-home', name: 'Atletico Madrid Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-016.webp',
     art: { t: 'jersey', body: '#CB3524', sleeve: '#CB3524', trim: '#FFFFFF', stripe: '#FFFFFF', pattern: 'stripes', tint: '#CB3524' } },
-  { id: 'atletico-away', name: 'Atletico Madrid Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/athmadrid%20away.jpeg',
+  { id: 'atletico-away', name: 'Atletico Madrid Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-015.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#FFFFFF', trim: '#CB3524', tint: '#CB3524' } },
-  { id: 'atletico-third', name: 'Atletico Madrid Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/athmadrid%20third.jpeg',
+  { id: 'atletico-third', name: 'Atletico Madrid Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-017.webp',
     art: { t: 'jersey', body: '#172A53', sleeve: '#172A53', trim: '#CB3524', tint: '#172A53' } },
-  { id: 'barca-home',    name: 'Barcelona Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['Best Seller'], img: 'Images/Fc%20Barcelona%20Home.jpeg',
+  { id: 'barca-home',    name: 'Barcelona Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['Best Seller'], img: 'Images/optimized/kit-003.webp',
     art: { t: 'jersey', body: '#A50044', sleeve: '#004D98', trim: '#EDBB00', stripe: '#004D98', pattern: 'stripes', tint: '#A50044' } },
-  { id: 'barca-third',   name: 'Barcelona Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['New'], img: 'Images/barce%20third.jpeg',
+  { id: 'barca-third',   name: 'Barcelona Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', badges: ['New'], img: 'Images/optimized/kit-019.webp',
     art: { t: 'jersey', body: '#101936', sleeve: '#101936', trim: '#EDBB00', stripe: '#EDBB00', pattern: 'stripes', tint: '#101936' } },
-  { id: 'chelsea-home',  name: 'Chelsea Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/chelsea%20home.jpeg',
+  { id: 'chelsea-home',  name: 'Chelsea Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-024.webp',
     art: { t: 'jersey', body: '#034694', sleeve: '#034694', trim: '#FFFFFF', collar: 'v', tint: '#034694' } },
-  { id: 'chelsea-away', name: 'Chelsea Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/chelsea%20away.jpeg',
+  { id: 'chelsea-away', name: 'Chelsea Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-023.webp',
     art: { t: 'jersey', body: '#F4F0E8', sleeve: '#F4F0E8', trim: '#034694', tint: '#034694' } },
-  { id: 'chelsea-third', name: 'Chelsea Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/chelsea%20third.jpeg',
+  { id: 'chelsea-third', name: 'Chelsea Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-025.webp',
     art: { t: 'jersey', body: '#151515', sleeve: '#151515', trim: '#034694', tint: '#151515' } },
-  { id: 'liverpool-home',name: 'Liverpool Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/liverpool%20home.jpeg',
+  { id: 'liverpool-home',name: 'Liverpool Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-040.webp',
     art: { t: 'jersey', body: '#C8102E', sleeve: '#C8102E', trim: '#FFFFFF', tint: '#C8102E' } },
-  { id: 'liverpool-away', name: 'Liverpool Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/liverpool%20away.jpeg',
+  { id: 'liverpool-away', name: 'Liverpool Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-039.webp',
     art: { t: 'jersey', body: '#F4F0E8', sleeve: '#F4F0E8', trim: '#C8102E', tint: '#C8102E' } },
-  { id: 'liverpool-third', name: 'Liverpool Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/liverpool%20third.jpeg',
+  { id: 'liverpool-third', name: 'Liverpool Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-043.webp',
     art: { t: 'jersey', body: '#172A53', sleeve: '#172A53', trim: '#C8102E', tint: '#172A53' } },
-  { id: 'liverpool-ls-home', name: 'Liverpool Home Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/liverpool%20long%20sleeve%20home.jpeg',
+  { id: 'liverpool-ls-home', name: 'Liverpool Home Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/optimized/kit-042.webp',
     art: { t: 'jersey', body: '#C8102E', sleeve: '#C8102E', trim: '#FFFFFF', tint: '#C8102E' } },
-  { id: 'liverpool-ls-away', name: 'Liverpool Away Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/liverpool%20long%20sleeve%20away.jpeg',
+  { id: 'liverpool-ls-away', name: 'Liverpool Away Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/optimized/kit-041.webp',
     art: { t: 'jersey', body: '#F4F0E8', sleeve: '#F4F0E8', trim: '#C8102E', tint: '#C8102E' } },
-  { id: 'psg-home', name: 'Paris Saint-Germain Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/psg%20home.jpeg',
+  { id: 'psg-home', name: 'Paris Saint-Germain Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-051.webp',
     art: { t: 'jersey', body: '#004170', sleeve: '#004170', trim: '#DA291C', stripe: '#DA291C', tint: '#004170' } },
-  { id: 'psg-away', name: 'Paris Saint-Germain Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/psg%20away.jpeg',
+  { id: 'psg-away', name: 'Paris Saint-Germain Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-050.webp',
     art: { t: 'jersey', body: '#F4F0E8', sleeve: '#F4F0E8', trim: '#004170', tint: '#004170' } },
-  { id: 'psg-third', name: 'Paris Saint-Germain Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/psg%20third.jpeg',
+  { id: 'psg-third', name: 'Paris Saint-Germain Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-052.webp',
     art: { t: 'jersey', body: '#151515', sleeve: '#151515', trim: '#DA291C', tint: '#151515' } },
-  { id: 'manutd-home', name: 'Manchester United Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/united%20home.jpeg',
+  { id: 'manutd-home', name: 'Manchester United Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-057.webp',
     art: { t: 'jersey', body: '#DA291C', sleeve: '#DA291C', trim: '#FBE122', tint: '#DA291C' } },
-  { id: 'manutd-home-ls', name: 'Manchester United Home Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/united%20long%20sleeve%20home.jpeg',
+  { id: 'manutd-home-ls', name: 'Manchester United Home Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/optimized/kit-058.webp',
     art: { t: 'jersey', body: '#DA291C', sleeve: '#DA291C', trim: '#FBE122', tint: '#DA291C' } },
-  { id: 'manutd-away', name: 'Manchester United Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/united%20away.jpeg',
+  { id: 'manutd-away', name: 'Manchester United Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-056.webp',
     art: { t: 'jersey', body: '#F2F0E6', sleeve: '#F2F0E6', trim: '#DA291C', tint: '#DA291C' } },
-  { id: 'manutd-third', name: 'Manchester United Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/united%20third.jpeg',
+  { id: 'manutd-third', name: 'Manchester United Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-059.webp',
     art: { t: 'jersey', body: '#172A53', sleeve: '#172A53', trim: '#DA291C', tint: '#172A53' } },
-  { id: 'spurs-home', name: 'Tottenham Hotspur Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/spurs%20home.jpeg',
+  { id: 'spurs-home', name: 'Tottenham Hotspur Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-054.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#FFFFFF', trim: '#132257', tint: '#132257' } },
-  { id: 'spurs-away', name: 'Tottenham Hotspur Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/spurs%20away.jpeg',
+  { id: 'spurs-away', name: 'Tottenham Hotspur Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-053.webp',
     art: { t: 'jersey', body: '#132257', sleeve: '#132257', trim: '#FFFFFF', tint: '#132257' } },
-  { id: 'spurs-third', name: 'Tottenham Hotspur Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/spurs%20third.jpeg',
+  { id: 'spurs-third', name: 'Tottenham Hotspur Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-055.webp',
     art: { t: 'jersey', body: '#151515', sleeve: '#151515', trim: '#FFFFFF', tint: '#151515' } },
-  { id: 'inter-home', name: 'Inter Milan Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/inter%20home.jpeg',
+  { id: 'inter-home', name: 'Inter Milan Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-031.webp',
     art: { t: 'jersey', body: '#00529F', sleeve: '#00529F', trim: '#111111', stripe: '#111111', tint: '#00529F' } },
-  { id: 'inter-away', name: 'Inter Milan Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/inter%20away.jpeg',
+  { id: 'inter-away', name: 'Inter Milan Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-030.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#FFFFFF', trim: '#00529F', tint: '#00529F' } },
-  { id: 'inter-third', name: 'Inter Milan Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/inter%20third.jpeg',
+  { id: 'inter-third', name: 'Inter Milan Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-035.webp',
     art: { t: 'jersey', body: '#111111', sleeve: '#111111', trim: '#F6A800', tint: '#111111' } },
-  { id: 'acmilan-home', name: 'AC Milan Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/ac%20milan%20home.jpeg',
+  { id: 'acmilan-home', name: 'AC Milan Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-005.webp',
     art: { t: 'jersey', body: '#FB090B', sleeve: '#111111', trim: '#FFFFFF', stripe: '#111111', tint: '#FB090B' } },
-  { id: 'acmilan-away', name: 'AC Milan Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/ac%20milan%20away.jpeg',
+  { id: 'acmilan-away', name: 'AC Milan Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-004.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#FFFFFF', trim: '#FB090B', tint: '#FB090B' } },
-  { id: 'acmilan-third', name: 'AC Milan Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/ac%20milan%20third.jpeg',
+  { id: 'acmilan-third', name: 'AC Milan Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-006.webp',
     art: { t: 'jersey', body: '#111111', sleeve: '#111111', trim: '#FB090B', tint: '#111111' } },
-  { id: 'juventus-home', name: 'Juventus Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/juventus%20home.jpeg',
+  { id: 'juventus-home', name: 'Juventus Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-037.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#111111', trim: '#FFFFFF', stripe: '#111111', tint: '#111111' } },
-  { id: 'juventus-away', name: 'Juventus Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/juventus%20away.jpeg',
+  { id: 'juventus-away', name: 'Juventus Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-036.webp',
     art: { t: 'jersey', body: '#F6A800', sleeve: '#F6A800', trim: '#111111', tint: '#F6A800' } },
-  { id: 'juventus-third', name: 'Juventus Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/juventus%20third.jpeg',
+  { id: 'juventus-third', name: 'Juventus Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-038.webp',
     art: { t: 'jersey', body: '#111111', sleeve: '#111111', trim: '#FFFFFF', tint: '#111111' } },
-  { id: 'intermiami-home', name: 'Inter Miami Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/inter%20miami%20home.jpeg',
+  { id: 'intermiami-home', name: 'Inter Miami Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-033.webp',
     art: { t: 'jersey', body: '#F7B5CD', sleeve: '#F7B5CD', trim: '#111111', tint: '#F7B5CD' } },
-  { id: 'intermiami-away', name: 'Inter Miami Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/inter%20miami%20away.jpeg',
+  { id: 'intermiami-away', name: 'Inter Miami Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-032.webp',
     art: { t: 'jersey', body: '#111111', sleeve: '#111111', trim: '#F7B5CD', tint: '#111111' } },
-  { id: 'intermiami-third', name: 'Inter Miami Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/inter%20miami%20third.jpeg',
+  { id: 'intermiami-third', name: 'Inter Miami Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-034.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#FFFFFF', trim: '#F7B5CD', tint: '#F7B5CD' } },
-  { id: 'alnassr-home', name: 'Al Nassr Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/al%20nassr%20home%20.jpeg',
+  { id: 'alnassr-home', name: 'Al Nassr Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-009.webp',
     art: { t: 'jersey', body: '#FBE122', sleeve: '#FBE122', trim: '#132257', tint: '#FBE122' } },
-  { id: 'alnassr-away', name: 'Al Nassr Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/al%20nassr%20away.jpeg',
+  { id: 'alnassr-away', name: 'Al Nassr Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-008.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#FFFFFF', trim: '#FBE122', tint: '#FBE122' } },
-  { id: 'alnassr-third', name: 'Al Nassr Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/al%20nassr%20third.jpeg',
+  { id: 'alnassr-third', name: 'Al Nassr Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-010.webp',
     art: { t: 'jersey', body: '#132257', sleeve: '#132257', trim: '#FBE122', tint: '#132257' } },
-  { id: 'astonvilla-home', name: 'Aston Villa Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/villa%20home.jpeg',
+  { id: 'astonvilla-home', name: 'Aston Villa Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-060.webp',
     art: { t: 'jersey', body: '#670E36', sleeve: '#95BFE5', trim: '#95BFE5', tint: '#670E36' } },
-  { id: 'astonvilla-home-ls', name: 'Aston Villa Home Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/villa%20long%20sleeve%20home.jpeg',
+  { id: 'astonvilla-home-ls', name: 'Aston Villa Home Long Sleeve 26/27', cat: 'fan', price: 20000, playerPrice: 20000, sizes: 'kit', img: 'Images/optimized/kit-061.webp',
     art: { t: 'jersey', body: '#670E36', sleeve: '#95BFE5', trim: '#95BFE5', tint: '#670E36' } },
-  { id: 'newcastle-home', name: 'Newcastle United Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/newcastle%20home.jpeg',
+  { id: 'newcastle-home', name: 'Newcastle United Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-047.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#111111', trim: '#111111', stripe: '#111111', tint: '#111111' } },
-  { id: 'forest-home', name: 'Nottingham Forest Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/forest%20away.jpeg',
+  { id: 'forest-home', name: 'Nottingham Forest Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-029.webp',
     art: { t: 'jersey', body: '#DD0000', sleeve: '#DD0000', trim: '#FFFFFF', tint: '#DD0000' } },
-  { id: 'ajax-away', name: 'Ajax Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/ajax%20away.jpeg',
+  { id: 'ajax-away', name: 'Ajax Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-007.webp',
     art: { t: 'jersey', body: '#111111', sleeve: '#111111', trim: '#FFFFFF', tint: '#111111' } },
 
   // Player editions, N18,000 - N20,000
-  { id: 'eagles-away-pe', name: 'Nigeria Super Eagles Away Player Edition', cat: 'player', price: 20000, sizes: 'kit', img: 'Images/nigeria%20away.jpeg',
+  { id: 'eagles-away-pe', name: 'Nigeria Super Eagles Away Player Edition', cat: 'player', price: 20000, sizes: 'kit', img: 'Images/optimized/kit-048.webp',
     art: { t: 'jersey', body: '#F4F7FA', sleeve: '#0E9F4F', trim: '#0E9F4F', stripe: '#0E9F4F', pattern: 'sash', tech: true, tint: '#0E9F4F' } },
-  { id: 'city-home-pe',   name: 'Manchester City Home Player Edition', cat: 'player', price: 18000, sizes: 'kit', badges: ['Best Seller'], img: 'Images/city%20home.jpeg',
+  { id: 'city-home-pe',   name: 'Manchester City Home Player Edition', cat: 'player', price: 18000, sizes: 'kit', badges: ['Best Seller'], img: 'Images/optimized/kit-027.webp',
     art: { t: 'jersey', body: '#6CABDD', sleeve: '#6CABDD', trim: '#1C2C5B', collar: 'v', tech: true, tint: '#6CABDD' } },
-  { id: 'city-away', name: 'Manchester City Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/city%20away.jpeg',
+  { id: 'city-away', name: 'Manchester City Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-026.webp',
     art: { t: 'jersey', body: '#172A53', sleeve: '#172A53', trim: '#6CABDD', tint: '#172A53' } },
-  { id: 'city-third', name: 'Manchester City Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/city%20third.jpeg',
+  { id: 'city-third', name: 'Manchester City Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-028.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#FFFFFF', trim: '#6CABDD', tint: '#6CABDD' } },
-  { id: 'barca-away-pe',  name: 'Barcelona Away Player Edition', cat: 'player', price: 20000, sizes: 'kit', badges: ['Limited'], img: 'Images/barce%20away.jpeg',
+  { id: 'barca-away-pe',  name: 'Barcelona Away Player Edition', cat: 'player', price: 20000, sizes: 'kit', badges: ['Limited'], img: 'Images/optimized/kit-018.webp',
     art: { t: 'jersey', body: '#101936', sleeve: '#101936', trim: '#F5D547', stripe: '#F5D547', pattern: 'band', tech: true, tint: '#101936' } },
-  { id: 'bayern-home-pe', name: 'Bayern Munich Home Player Edition', cat: 'player', price: 18000, sizes: 'kit', img: 'Images/bayern%20home.jpeg',
+  { id: 'bayern-home-pe', name: 'Bayern Munich Home Player Edition', cat: 'player', price: 18000, sizes: 'kit', img: 'Images/optimized/kit-021.webp',
     art: { t: 'jersey', body: '#DC052D', sleeve: '#DC052D', trim: '#0066B2', tech: true, tint: '#DC052D' } },
-  { id: 'bayern-away', name: 'Bayern Munich Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/bayern%20away.jpeg',
+  { id: 'bayern-away', name: 'Bayern Munich Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-020.webp',
     art: { t: 'jersey', body: '#172A53', sleeve: '#172A53', trim: '#FFFFFF', tint: '#172A53' } },
-  { id: 'bayern-third', name: 'Bayern Munich Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/bayern%20third.jpeg',
+  { id: 'bayern-third', name: 'Bayern Munich Third 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-022.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#FFFFFF', trim: '#DC052D', tint: '#DC052D' } },
-  { id: 'madrid-away-pe', name: 'Real Madrid Away Player Edition', cat: 'player', price: 20000, sizes: 'kit', img: 'Images/madrid%20away.jpeg',
+  { id: 'madrid-away-pe', name: 'Real Madrid Away Player Edition', cat: 'player', price: 20000, sizes: 'kit', img: 'Images/optimized/kit-044.webp',
     art: { t: 'jersey', body: '#1F2A44', sleeve: '#1F2A44', trim: '#E8C547', stripe: '#E8C547', pattern: 'sash', tech: true, tint: '#1F2A44' } },
 
   // Football boots, N40,000 - N55,000
@@ -948,7 +949,9 @@ function save() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify({ cart: cart.map(({ id, size, qty, version, customName, customNumber }) => ({ id, size, qty, version, customName, customNumber })), zone })); } catch (_) {}
 }
 function lineVersion(line) { return line.version || defaultVersion(byId[line.id]); }
-const cartTotal = () => cart.reduce((s, l) => s + versionPrice(byId[l.id], lineVersion(l)) * l.qty, 0);
+function lineCustomizationFee(line) { return line.customName || line.customNumber ? CUSTOMIZATION_FEE : 0; }
+function lineUnitPrice(line) { return versionPrice(byId[line.id], lineVersion(line)) + lineCustomizationFee(line); }
+const cartTotal = () => cart.reduce((s, l) => s + lineUnitPrice(l) * l.qty, 0);
 
 /* =====================================================
    ELEMENTS
@@ -1028,7 +1031,7 @@ function cardHTML(p, i) {
         <option value="player"${version === 'player' ? ' selected' : ''}>Player Version</option>
       </select>` : '';
   const customization = p.sizes === 'kit' ? `<details class="customize">
-        <summary>Add custom name or number (optional)</summary>
+        <summary>Add custom name or number (+₦2,000 per jersey)</summary>
         <div class="custom-fields">
           <input type="text" maxlength="24" placeholder="Name" aria-label="Custom name for ${esc(productBaseName(p))}" data-custom-name>
           <input type="text" inputmode="numeric" maxlength="2" pattern="[0-9]{0,2}" placeholder="Number" aria-label="Custom number for ${esc(productBaseName(p))}" data-custom-number>
@@ -1039,7 +1042,7 @@ function cardHTML(p, i) {
     <div class="media" style="--tint:${esc(p.art.tint || '#1B365D')}">
       ${badgeHTML}
       ${art(p, 'g')}
-      ${p.img ? `<img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy">` : ''}
+      ${p.img ? `<img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy" decoding="async" fetchpriority="low">` : ''}
     </div>
     <div class="card-body">
       <h3>${esc(productBaseName(p))}</h3>
@@ -1166,14 +1169,17 @@ function removeLine(key, li) {
 function lineHTML(l) {
   const p = byId[l.id];
   const version = lineVersion(l);
-  const unitPrice = versionPrice(p, version);
+  const basePrice = versionPrice(p, version);
+  const customFee = lineCustomizationFee(l);
+  const unitPrice = basePrice + customFee;
   const printDetails = [l.customName && `Name: ${esc(l.customName)}`, l.customNumber && `Number: ${esc(l.customNumber)}`].filter(Boolean).join(' | ');
+  const priceDetails = customFee ? `${naira(basePrice)} each + ${naira(customFee)} customization each` : `${naira(basePrice)} each`;
   const isNew = l.key === newKey;
   return `<li class="line-item${isNew ? ' new' : ''}" data-key="${esc(l.key)}">
   <div class="thumb" style="--tint:${esc(p.art.tint || '#1B365D')}">${art(p, 'c')}</div>
   <div>
     <p class="li-name">${esc(productBaseName(p))}</p>
-    <p class="li-meta">${version ? versionLabel(version) + ' &nbsp;|&nbsp; ' : ''}Size: ${esc(l.size)} &nbsp;|&nbsp; ${naira(unitPrice)} each${printDetails ? ' &nbsp;|&nbsp; ' + printDetails : ''}</p>
+    <p class="li-meta">${version ? versionLabel(version) + ' &nbsp;|&nbsp; ' : ''}Size: ${esc(l.size)} &nbsp;|&nbsp; ${priceDetails}${printDetails ? ' &nbsp;|&nbsp; ' + printDetails : ''}</p>
     <div class="li-row">
       <div class="stepper" role="group" aria-label="Quantity for ${esc(p.name)}, size ${esc(l.size)}">
         <button type="button" data-act="dec" aria-label="Decrease quantity" aria-disabled="${l.qty <= 1}">${ICON.minus}</button>
@@ -1196,9 +1202,14 @@ function buildMessage() {
   cart.forEach((l, i) => {
     const p = byId[l.id];
     const version = lineVersion(l);
-    const unitPrice = versionPrice(p, version);
+    const basePrice = versionPrice(p, version);
+    const customFee = lineCustomizationFee(l);
+    const unitPrice = basePrice + customFee;
     const printDetails = [l.customName && 'Custom name: ' + l.customName, l.customNumber && 'Custom number: ' + l.customNumber].filter(Boolean).join(' | ');
-    out.push((i + 1) + '. *' + productBaseName(p) + (version ? ' - ' + versionLabel(version) : '') + '* | Size: ' + l.size + ' | Qty: ' + l.qty + ' | ' + naira(unitPrice) + ' each = ' + naira(unitPrice * l.qty) + (printDetails ? ' | ' + printDetails : ''));
+    const priceDetails = customFee
+      ? naira(basePrice) + ' each + ' + naira(customFee) + ' customization each = ' + naira(unitPrice) + ' each | Line total: ' + naira(unitPrice * l.qty)
+      : naira(unitPrice) + ' each = ' + naira(unitPrice * l.qty);
+    out.push((i + 1) + '. *' + productBaseName(p) + (version ? ' - ' + versionLabel(version) : '') + '* | Size: ' + l.size + ' | Qty: ' + l.qty + ' | ' + priceDetails + (printDetails ? ' | ' + printDetails : ''));
   });
   out.push('');
   out.push('*TOTAL ORDER AMOUNT: ' + naira(cartTotal()) + '*');
@@ -1373,8 +1384,8 @@ const jerseyPhotos = PRODUCTS
   .filter(product => product.img && (product.cat === 'fan' || product.cat === 'player'))
   .map(product => ({ src: product.img, alt: product.name }));
 const bootPhotos = [
-  { src: 'Images/Adidas%20Predator%202.jpeg', alt: 'Adidas Predator football boot' },
-  { src: 'Images/Adidas%20Predator.jpeg', alt: 'Adidas Predator football boot' }
+  { src: 'Images/optimized/kit-001.webp', alt: 'Adidas Predator football boot' },
+  { src: 'Images/optimized/kit-002.webp', alt: 'Adidas Predator football boot' }
 ];
 let jerseyPhotoIndex = Math.max(0, jerseyPhotos.findIndex(photo => photo.src === heroJersey.getAttribute('src')));
 let bootPhotoIndex = Math.max(0, bootPhotos.findIndex(photo => photo.src === heroBoot.getAttribute('src')));
