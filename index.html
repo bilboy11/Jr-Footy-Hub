@@ -1022,7 +1022,7 @@ function cardHTML(p, i) {
   const opts = sizes.length === 1
     ? `<option value="${esc(sizes[0])}" selected>${esc(sizes[0])}</option>`
     : `<option value="" disabled selected>Select size</option>` + sizes.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join('');
-  const badges = (p.badges || []).slice();
+  const badges = (p.badges || []).filter(b => b !== 'Best Seller' && b !== 'New' && b !== 'Limited');
   const badgeHTML = badges.length ? `<div class="badges">${badges.map(b => `<span class="badge ${BADGE_CLASS[b] || 'badge-hot'}">${esc(b)}</span>`).join('')}</div>` : '';
   const d = ((i % 4) * 70) + 'ms';
   const version = defaultVersion(p);
@@ -1351,6 +1351,10 @@ menuBtn.addEventListener('click', () => {
   mobileNav.classList.toggle('open', open);
   menuBtn.setAttribute('aria-expanded', String(open));
   menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
+document.addEventListener('pointerdown', e => {
+  if (searchPanel.classList.contains('open') && !searchPanel.contains(e.target) && !searchBtn.contains(e.target)) closeSearch();
+  if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !menuBtn.contains(e.target)) closeMenu();
 });
 
 /* Keyboard: Escape closes things, Tab stays inside the cart while it is open */
