@@ -979,8 +979,8 @@ function toast(title, sub, kind) {
 /* =====================================================
    CATALOG
    ===================================================== */
-const TABS = [['all', 'All kits'], ['fan', CATS.fan.label], ['player', CATS.player.label], ['boots', CATS.boots.label], ['gear', CATS.gear.label]];
-const isTabActive = k => state.filter === k || (state.filter === 'jerseys' && (k === 'fan' || k === 'player'));
+const TABS = [['all', 'All Kits'], ['jerseys', 'Jerseys'], ['boots', 'Boots'], ['balls', 'Match Balls'], ['gear', 'Gear & Accessories']];
+const isTabActive = k => state.filter === k || (k === 'jerseys' && (state.filter === 'fan' || state.filter === 'player'));
 
 function buildTabs() {
   tabsEl.innerHTML = TABS.map(([k, l]) =>
@@ -996,6 +996,8 @@ function matchFilter(p) {
   const f = state.filter;
   if (f === 'all') return true;
   if (f === 'jerseys') return p.cat === 'fan' || p.cat === 'player';
+  if (f === 'balls') return p.cat === 'gear' && p.art.k === 'ball';
+  if (f === 'gear') return p.cat === 'gear' && p.art.k !== 'ball';
   return p.cat === f;
 }
 function visibleProducts() {
