@@ -765,8 +765,14 @@ const PRODUCTS = [
     art: { t: 'boot', upper: '#10B981', accent: '#0F2140', sole: '#0F2140', stud: '#0F2140', lace: '#0F2140', tint: '#10B981' } },
 
   // Gear & accessories, N3,000 - N10,000
-  { id: 'gear-ball',     name: 'Pro Match Ball (Size 5)', cat: 'gear', price: 10000, sizes: 'one', badges: ['Best Seller'],
+  { id: 'gear-ball',     name: 'UEFA Champions League Match Ball (Size 5)', cat: 'gear', price: 18000, sizes: 'one', img: 'Images/optimized/match-ball-01.webp',
     art: { t: 'gear', k: 'ball', patch: '#1B365D', tint: '#1B365D' } },
+  { id: 'laliga-ball', name: 'LaLiga Match Ball (Size 5)', cat: 'gear', price: 18000, sizes: 'one', img: 'Images/optimized/match-ball-02.webp',
+    art: { t: 'gear', k: 'ball', patch: '#F4511E', tint: '#F4511E' } },
+  { id: 'premier-league-ball', name: 'Premier League Match Ball (Size 5)', cat: 'gear', price: 18000, sizes: 'one', img: 'Images/optimized/match-ball-03.webp',
+    art: { t: 'gear', k: 'ball', patch: '#6938EF', tint: '#6938EF' } },
+  { id: 'premier-league-ball2', name: 'Premier League Match Ball 2 (Size 5)', cat: 'gear', price: 18000, sizes: 'one', img: 'Images/optimized/match-ball-04.webp',
+    art: { t: 'gear', k: 'ball', patch: '#6938EF', tint: '#6938EF' } },
   { id: 'gear-gloves',   name: 'Goalkeeper Gloves', cat: 'gear', price: 8500, sizes: 'glove',
     art: { t: 'gear', k: 'gloves', main: '#1B365D', accent: '#5EEAD4', cuff: '#0F2140', tint: '#1B365D' } },
   { id: 'gear-guards',   name: 'Shin Guards', cat: 'gear', price: 4500, sizes: 'guard',
@@ -1024,6 +1030,7 @@ function cardHTML(p, i) {
   const opts = sizes.length === 1
     ? `<option value="${esc(sizes[0])}" selected>${esc(sizes[0])}</option>`
     : `<option value="" disabled selected>Select size</option>` + sizes.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join('');
+  const sizeSelect = p.art.k === 'ball' ? '' : `<select class="size" aria-label="Size for ${esc(p.name)}" required>${opts}</select>`;
   const badges = (p.badges || []).filter(b => b !== 'Best Seller' && b !== 'New' && b !== 'Limited');
   const badgeHTML = badges.length ? `<div class="badges">${badges.map(b => `<span class="badge ${BADGE_CLASS[b] || 'badge-hot'}">${esc(b)}</span>`).join('')}</div>` : '';
   const d = ((i % 4) * 70) + 'ms';
@@ -1048,7 +1055,7 @@ function cardHTML(p, i) {
     </div>
     <div class="card-body">
       <h3>${esc(productBaseName(p))}</h3>
-      <select class="size" aria-label="Size for ${esc(p.name)}" required>${opts}</select>
+      ${sizeSelect}
       ${versionSelect}
       ${customization}
       <div class="card-actions">
@@ -1121,8 +1128,9 @@ productsEl.addEventListener('click', e => {
   if (!btn) return;
   const card = btn.closest('.card');
   const p = byId[card.dataset.id];
-  const sel = $('select.size', card);
-  if (!sel.value) {
+  const sel = $('select.size:not(.version-select)', card);
+  const selectedSize = sel ? sel.value : SIZESETS[p.sizes][0];
+  if (!selectedSize) {
     sel.classList.remove('shake'); void sel.offsetWidth;
     sel.classList.add('err', 'shake');
     sel.focus();
@@ -1132,13 +1140,13 @@ productsEl.addEventListener('click', e => {
   const versionSelect = $('[data-version-select]', card);
   const customName = $('[data-custom-name]', card)?.value.trim().slice(0, 24) || '';
   const customNumber = $('[data-custom-number]', card)?.value.replace(/\D/g, '').slice(0, 2) || '';
-  addToCart(p.id, sel.value, versionSelect ? versionSelect.value : null, { customName, customNumber });
+  addToCart(p.id, selectedSize, versionSelect ? versionSelect.value : null, { customName, customNumber });
   flyToCart($('.media', card));
   btn.classList.add('added');
   clearTimeout(btn._t);
   btn._t = setTimeout(() => btn.classList.remove('added'), 1500);
   const addedVersion = versionSelect ? ' - ' + versionLabel(versionSelect.value) : '';
-  toast('Added to cart', productBaseName(p) + addedVersion + ' (' + sel.value + ')');
+  toast('Added to cart', productBaseName(p) + addedVersion + ' (' + selectedSize + ')');
 });
 /* If a real product photo fails to load, fall back to the drawn art underneath */
 productsEl.addEventListener('error', e => { if (e.target && e.target.tagName === 'IMG') e.target.remove(); }, true);
