@@ -92,7 +92,10 @@
   .searchbox button:hover{background:var(--line)}
   .mobilenav{padding-inline:0}
   .mobilenav a{display:block;padding:14px 4px;font-size:18px;font-weight:800;color:var(--navy);border-top:1px solid var(--line)}
-  .mobilenav .ig-line{display:flex;align-items:center;gap:10px}
+  .mobilenav .ig-line{display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:12px;align-items:center;line-height:1.3}
+  .mobilenav .ig-line svg{grid-row:1 / span 2;width:24px;height:24px}
+  .mobilenav .ig-line span{min-width:0;overflow-wrap:anywhere}
+  .mobilenav .ig-line small{font-size:13px;font-weight:600;color:var(--muted)}
   @media(min-width:768px){.mobilenav{display:none}}
 
   /* ---------- Buttons ---------- */
@@ -403,7 +406,8 @@
         <a href="#shop" data-filter="gear">Gear</a>
         <a class="ig-line" href="https://www.instagram.com/jr_footy_hub/" target="_blank" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r=".7" fill="currentColor"/></svg>
-          @jr_footy_hub on Instagram
+          <span>@jr_footy_hub</span>
+          <small>Follow us on Instagram</small>
         </a>
       </div>
     </nav>
@@ -443,7 +447,7 @@
         <div class="hv" id="hv" aria-hidden="true">
           <div class="hv-ring"></div>
           <div class="hv-layer hv-jersey"><div class="pop"><div class="floaty"><img class="hero-jersey-photo" src="Images/optimized/kit-003.webp" alt="FC Barcelona home jersey" decoding="async" fetchpriority="high"></div></div></div>
-          <div class="hv-layer hv-boot"><div class="pop b"><div class="floaty slow"><img class="hero-boot-photo" src="Images/blue predator nanostrike.jpeg" alt="adidas Predator Nanostrike Blue" decoding="async" fetchpriority="low"></div></div></div>
+          <div class="hv-layer hv-boot"><div class="pop b"><div class="floaty slow"><img class="hero-boot-photo" src="Images/optimized/blue-predator-nanostrike.webp" alt="adidas Predator Nanostrike Blue" decoding="async" fetchpriority="low"></div></div></div>
           <div class="chip c2"><b>Sizes covered</b><span>S to XXL and EU 40 to 45</span></div>
         </div>
       </div>
@@ -475,7 +479,7 @@
     <div class="wrap">
       <div class="cat-head">
         <div>
-          <h2 class="h2" id="shopTitle">Shop the current season</h2>
+          <h2 class="h2" id="shopTitle">Shop New Arrivals</h2>
           <p class="sub">Choose your size, add to cart, and send your order straight to WhatsApp.</p>
         </div>
         <p class="result-line" id="resultLine" role="status" aria-live="polite"></p>
@@ -725,7 +729,7 @@ const PRODUCTS = [
     art: { t: 'jersey', body: '#670E36', sleeve: '#95BFE5', trim: '#95BFE5', tint: '#670E36' } },
   { id: 'newcastle-home', name: 'Newcastle United Home 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-047.webp',
     art: { t: 'jersey', body: '#FFFFFF', sleeve: '#111111', trim: '#111111', stripe: '#111111', tint: '#111111' } },
-  { id: 'forest-home', name: 'Nottingham Forest Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-029.webp',
+  { id: 'forest-away', name: 'Nottingham Forest Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-029.webp',
     art: { t: 'jersey', body: '#DD0000', sleeve: '#DD0000', trim: '#FFFFFF', tint: '#DD0000' } },
   { id: 'ajax-away', name: 'Ajax Away 26/27', cat: 'fan', price: 12000, sizes: 'kit', img: 'Images/optimized/kit-007.webp',
     art: { t: 'jersey', body: '#111111', sleeve: '#111111', trim: '#FFFFFF', tint: '#111111' } },
@@ -751,35 +755,35 @@ const PRODUCTS = [
     art: { t: 'jersey', body: '#1F2A44', sleeve: '#1F2A44', trim: '#E8C547', stripe: '#E8C547', pattern: 'sash', tech: true, tint: '#1F2A44' } },
 
   // Football boots, N40,000 - N55,000
-  { id: 'boot-predator-nanostrike-blue', name: 'adidas Predator Nanostrike Blue', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/blue predator nanostrike.jpeg',
+  { id: 'boot-predator-nanostrike-blue', name: 'adidas Predator Nanostrike Blue', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/blue-predator-nanostrike.webp',
     art: { t: 'boot', upper: '#1677D2', accent: '#FFFFFF', sole: '#0F2140', stud: '#FFFFFF', lace: '#FFFFFF', tint: '#1677D2' } },
-  { id: 'boot-predator-nanostrike-dark-red', name: 'adidas Predator Nanostrike Dark Red', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/dark red predator nanostrike.jpeg',
+  { id: 'boot-predator-nanostrike-dark-red', name: 'adidas Predator Nanostrike Dark Red', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/dark-red-predator-nanostrike.webp',
     art: { t: 'boot', upper: '#6F1020', accent: '#E11D48', sole: '#0F2140', stud: '#E11D48', lace: '#E11D48', tint: '#6F1020' } },
-  { id: 'boot-predator-nanostrike-red', name: 'adidas Predator Nanostrike Red', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/red predator nanostrike.jpeg',
+  { id: 'boot-predator-nanostrike-red', name: 'adidas Predator Nanostrike Red', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/red-predator-nanostrike.webp',
     art: { t: 'boot', upper: '#D91F35', accent: '#FFFFFF', sole: '#0F2140', stud: '#FFFFFF', lace: '#FFFFFF', tint: '#D91F35' } },
-  { id: 'boot-f50-hyperfast', name: 'adidas F50 Hyperfast', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/F50 hyperfast.jpeg',
+  { id: 'boot-f50-hyperfast', name: 'adidas F50 Hyperfast', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/f50-hyperfast.webp',
     art: { t: 'boot', upper: '#DDE3EA', accent: '#1B365D', sole: '#1B365D', stud: '#1B365D', lace: '#1B365D', tint: '#5B6B82' } },
-  { id: 'boot-f50-messi', name: 'adidas F50 Messi Edition', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/F50 messi edition.jpeg',
+  { id: 'boot-f50-messi', name: 'adidas F50 Messi Edition', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/f50-messi-edition.webp',
     art: { t: 'boot', upper: '#DDE3EA', accent: '#1B365D', sole: '#1B365D', stud: '#1B365D', lace: '#1B365D', tint: '#5B6B82' } },
-  { id: 'boot-predator-green', name: 'adidas Predator Green', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/green adidas predator.jpeg',
+  { id: 'boot-predator-green', name: 'adidas Predator Green', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/green-adidas-predator.webp',
     art: { t: 'boot', upper: '#1D9A68', accent: '#FFFFFF', sole: '#0F2140', stud: '#FFFFFF', lace: '#FFFFFF', tint: '#1D9A68' } },
-  { id: 'boot-predator-red', name: 'adidas Predator Red', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/red adidas predator.jpeg',
+  { id: 'boot-predator-red', name: 'adidas Predator Red', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/red-adidas-predator.webp',
     art: { t: 'boot', upper: '#D91F35', accent: '#FFFFFF', sole: '#0F2140', stud: '#FFFFFF', lace: '#FFFFFF', tint: '#D91F35' } },
-  { id: 'boot-predator-white', name: 'adidas Predator White', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/white adidas predator.jpeg',
+  { id: 'boot-predator-white', name: 'adidas Predator White', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/white-adidas-predator.webp',
     art: { t: 'boot', upper: '#F5F7FA', accent: '#1B365D', sole: '#0F2140', stud: '#1B365D', lace: '#1B365D', tint: '#A9BAD0' } },
-  { id: 'boot-f50-hyperfast-white', name: 'adidas F50 Hyperfast White', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/white F50 hyperfast.jpeg',
+  { id: 'boot-f50-hyperfast-white', name: 'adidas F50 Hyperfast White', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/white-f50-hyperfast.webp',
     art: { t: 'boot', upper: '#F5F7FA', accent: '#1B365D', sole: '#1B365D', stud: '#1B365D', lace: '#1B365D', tint: '#A9BAD0' } },
-  { id: 'boot-mercurial-air-zoom', name: 'Nike Mercurial Air Zoom', cat: 'boots', price: 55000, sizes: 'boot', img: 'Images/nike mercurial air zoom.jpeg',
+  { id: 'boot-mercurial-air-zoom', name: 'Nike Mercurial Air Zoom', cat: 'boots', price: 55000, sizes: 'boot', img: 'Images/optimized/nike-mercurial-air-zoom.webp',
     art: { t: 'boot', upper: '#D7F546', accent: '#0F2140', sole: '#0F2140', stud: '#0F2140', lace: '#0F2140', tint: '#D7F546' } },
-  { id: 'boot-mercurial-air-zoom-2', name: 'Nike Mercurial Air Zoom 2', cat: 'boots', price: 55000, sizes: 'boot', img: 'Images/nike mercurial air zoom 2.jpeg',
+  { id: 'boot-mercurial-air-zoom-2', name: 'Nike Mercurial Air Zoom 2', cat: 'boots', price: 55000, sizes: 'boot', img: 'Images/optimized/nike-mercurial-air-zoom-2.webp',
     art: { t: 'boot', upper: '#D7F546', accent: '#0F2140', sole: '#0F2140', stud: '#0F2140', lace: '#0F2140', tint: '#D7F546' } },
-  { id: 'boot-phantom-6', name: 'Nike Phantom 6', cat: 'boots', price: 45000, sizes: 'boot', img: 'Images/nike phantom 6.jpeg',
+  { id: 'boot-phantom-6', name: 'Nike Phantom 6', cat: 'boots', price: 45000, sizes: 'boot', img: 'Images/optimized/nike-phantom-6.webp',
     art: { t: 'boot', upper: '#F97316', accent: '#0F2140', sole: '#0F2140', stud: '#0F2140', lace: '#0F2140', tint: '#F97316' } },
-  { id: 'boot-phantom-gx', name: 'Nike Phantom GX', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/nike phantom gx.jpeg',
+  { id: 'boot-phantom-gx', name: 'Nike Phantom GX', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/nike-phantom-gx.webp',
     art: { t: 'boot', upper: '#F97316', accent: '#0F2140', sole: '#0F2140', stud: '#0F2140', lace: '#0F2140', tint: '#F97316' } },
-  { id: 'boot-phantom-gx-2', name: 'Nike Phantom GX 2', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/nike phantom gx 2.jpeg',
+  { id: 'boot-phantom-gx-2', name: 'Nike Phantom GX 2', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/nike-phantom-gx-2.webp',
     art: { t: 'boot', upper: '#F97316', accent: '#0F2140', sole: '#0F2140', stud: '#0F2140', lace: '#0F2140', tint: '#F97316' } },
-  { id: 'boot-tiempo-nike', name: 'Nike Tiempo', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/nike tiempo.jpeg',
+  { id: 'boot-tiempo-nike', name: 'Nike Tiempo', cat: 'boots', price: 50000, sizes: 'boot', img: 'Images/optimized/nike-tiempo.webp',
     art: { t: 'boot', upper: '#10B981', accent: '#0F2140', sole: '#0F2140', stud: '#0F2140', lace: '#0F2140', tint: '#10B981' } },
 
   // Gear & accessories, N3,000 - N10,000
@@ -791,15 +795,15 @@ const PRODUCTS = [
     art: { t: 'gear', k: 'ball', patch: '#6938EF', tint: '#6938EF' } },
   { id: 'premier-league-ball2', name: 'Premier League Match Ball 2 (Size 5)', cat: 'gear', price: 18000, sizes: 'one', img: 'Images/optimized/match-ball-04.webp',
     art: { t: 'gear', k: 'ball', patch: '#6938EF', tint: '#6938EF' } },
-  { id: 'gear-gloves',   name: 'Goalkeeper Gloves', cat: 'gear', price: 10000, sizes: 'glove', img: 'Images/gloves.jpeg',
+  { id: 'gear-gloves',   name: 'Goalkeeper Gloves', cat: 'gear', price: 10000, sizes: 'glove', img: 'Images/optimized/gloves.webp',
     art: { t: 'gear', k: 'gloves', main: '#1B365D', accent: '#5EEAD4', cuff: '#0F2140', tint: '#1B365D' } },
-  { id: 'gear-guards',   name: 'Shin Pads', cat: 'gear', price: 4000, sizes: 'guard', img: 'Images/shin pads.jpeg',
+  { id: 'gear-guards',   name: 'Shin Pads', cat: 'gear', price: 4000, sizes: 'guard', img: 'Images/optimized/shin-pads.webp',
     art: { t: 'gear', k: 'guards', main: '#0F2140', accent: '#5EEAD4', tint: '#0F2140' } },
-  { id: 'gear-socks-short', name: 'Short Grip Socks', cat: 'gear', price: 3000, sizes: 'one', img: 'Images/short grip socks.jpeg',
+  { id: 'gear-socks-short', name: 'Short Grip Socks', cat: 'gear', price: 3000, sizes: 'one', img: 'Images/optimized/short-grip-socks.webp',
     art: { t: 'gear', k: 'socks', main: '#F3F6F9', accent: '#1B365D', tint: '#1B365D' } },
-  { id: 'gear-socks-long', name: 'Long Grip Socks', cat: 'gear', price: 4000, sizes: 'one', img: 'Images/long grip socks.jpeg',
+  { id: 'gear-socks-long', name: 'Long Grip Socks', cat: 'gear', price: 4000, sizes: 'one', img: 'Images/optimized/long-grip-socks.webp',
     art: { t: 'gear', k: 'socks', main: '#F3F6F9', accent: '#1B365D', tint: '#1B365D' } },
-  { id: 'gear-socks-cut', name: 'Cut Socks', cat: 'gear', price: 3000, sizes: 'one', img: 'Images/cut socks.jpeg',
+  { id: 'gear-socks-cut', name: 'Cut Socks', cat: 'gear', price: 3000, sizes: 'one', img: 'Images/optimized/cut-socks.webp',
     art: { t: 'gear', k: 'socks', main: '#F3F6F9', accent: '#1B365D', tint: '#1B365D' } }
 ];
 const byId = Object.fromEntries(PRODUCTS.map(p => [p.id, p]));
@@ -1244,7 +1248,7 @@ function buildMessage() {
   out.push('*TOTAL ORDER AMOUNT: ' + naira(cartTotal()) + '*');
   out.push('');
   out.push('Delivery details:');
-  out.push('Delivery area: ' + (zone || ''));
+  out.push('Delivery area: ' + (zone || 'Abuja / Kaduna / Interstate'));
   out.push('Delivery address: ');
   out.push('Full name: ');
   out.push('Phone number: ');
