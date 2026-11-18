@@ -1279,7 +1279,7 @@ function renderCart() {
   newKey = null;
   subtotalEl.textContent = naira(cartTotal());
   $$('.zone').forEach(z => z.setAttribute('aria-pressed', String(z.dataset.zone === zone)));
-  checkout.setAttribute('aria-disabled', String(!cart.length || !zone));
+  checkout.setAttribute('aria-disabled', String(!cart.length));
   checkout.href = cart.length ? waUrl() : '#';
 
   if (keep) {
@@ -1306,11 +1306,6 @@ $('.zones').addEventListener('click', e => {
 });
 checkout.addEventListener('click', e => {
   if (!cart.length) { e.preventDefault(); return; }
-  if (!zone) {
-    e.preventDefault();
-    toast('Choose a delivery area', 'Select Abuja, Kaduna or Interstate before checkout.', 'err');
-    return;
-  }
   checkout.href = waUrl();   // rebuild right before the browser follows the link
 });
 
